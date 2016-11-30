@@ -5,7 +5,8 @@
 
    $res = $_POST['data'];
    $decode = json_decode($res);
-   $dest = $decode["destino"];
+   echo var_dump($decode);
+   /*$dest = $decode["destino"];
    $tipo = $decode["tipo"];
    $desc = $decode["descripcion"];
    $precio = $decode["precio"];
@@ -21,5 +22,5 @@
    } else {
      echo '{"eror": {"text": "no se encontó la agencia"}}';
    }
-
+*/
 ?>
