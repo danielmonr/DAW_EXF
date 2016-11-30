@@ -5,14 +5,13 @@
 
    $res = $_POST['data'];
    $decode = json_decode($res);
-   echo $decode;
-   /*$dest = $decode->{'destino'};
-   $tipo = $decode->{'tipo'};
-   $desc = $decode->{'descripcion'};
-   $precio = $decode->{'precio'};
-   $partida = $decode->{'partida'};
-   $regreso = $decode->{'regreso'};
-   $medio = $decode->{'medio'};
+   $dest = $decode["destino"];
+   $tipo = $decode["tipo"];
+   $desc = $decode["descripcion"];
+   $precio = $decode["precio"];
+   $partida = $decode["partida"];
+   $regreso = $decode["regreso"];
+   $medio = $decode["medio"];
 
    $sql = "insert into exf_Viajes (destino, tipo, descripcion, precio, partida, regreso, medio) values (".$dest . $tipo . $desc . $precio . $precio . $partida . $regreso . $medio . ")";
 
@@ -21,6 +20,6 @@
      echo '{"success":"true"}';
    } else {
      echo '{"eror": {"text": "no se encontó la agencia"}}';
-   }*/
+   }
 
 ?>
