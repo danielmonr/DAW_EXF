@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once("session.php");
    include_once("DBConnection.php");
    $db = new DBConnection();
