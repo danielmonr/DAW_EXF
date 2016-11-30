@@ -72,7 +72,7 @@
     <a name="forma"></a>
     <div class="intro-form">
     <div class="container">
-      <form action="" method="">
+      <form action="" id="form">
         <div class="form-group">
           <label for="dest">Destino:</label>
           <input type="text" class="form-control" id="dest">
@@ -101,7 +101,15 @@
             <option>Barco</option>
             <option>Camion</option>
           </select>
+          <input type="submit" value="Submit">
       </form>
+      <script>
+        $("#form").submit(function( event ){
+          event.prventDefault();
+          var $form = $(this), term =
+        })
+      </script>
+
     </div>
 
     <!-- Footer -->
