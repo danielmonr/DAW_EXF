@@ -2,10 +2,9 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
 
     </script>
     <meta charset="utf-8">
@@ -84,10 +83,11 @@
           <label for="precio">Precio:</label>
           <input type="text" class="form-control" id="precio">
           <label for="partida">Fecha de Partida:</label>
-          <input type="text" id="partida">
-          <script type="text/javascript">
+          <input type='text' class="form-control" id="partida"/>
+
+          <script>
             $(function () {
-                $('#partida').datepicker();
+                $('#partida').datetpicker();
             });
           </script>
           <label for="regreso">Fecha de Regreso:</label>
