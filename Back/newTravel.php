@@ -3,7 +3,7 @@
    $db = new DBConnection();
    $dbc = $db->Connect();
 
-   $res = $_POST['jsonf'];
+   $res = $_POST['data'];
    $decode = json_decode($res);
    $dest = $decode->{'destino'};
    $tipo = $decode->{'tipo'};
