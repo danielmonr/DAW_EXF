@@ -99,7 +99,8 @@
       </form>
       <script>
         $("#forma").submit(function(){
-          var jsonf = $(this).serializeArray();
+          var jsonf = JSON.stringify($(this).serializeArray());
+
           //alert("Data" + jsonf);
           console.log( $( this ).serializeArray() );
           event.preventDefault();
