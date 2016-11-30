@@ -5,9 +5,7 @@
 
    $sql = "select * from exf_Agencia where id = 1";
 
-   $result = $dbc->query($sql);
-
-   if ($result->num_rows > 0) {
+   if ($result = $dbc->query($sql)){
      // output data of each row
      $r = $result->fetch_assoc();
      $json = json_encode($r);
