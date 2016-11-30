@@ -4,18 +4,20 @@
    $dbc = $db->Connect();
 
    $res = $_POST['jsonf'];
-
-   echo $res;
-
    $decode = json_decode($res);
+   $dest = $decode->{'destino'};
+   $tipo = $decode->{'tipo'};
+   $desc = $decode->{'descripcion'};
+   $precio = $decode->{'precio'};
+   $partida = $decode->{'partida'};
+   $regreso = $decode->{'regreso'};
+   $medio = $decode->{'medio'};
 
-   $sql = "insert into exf_Viajes (destino, tipo, descripcion, foto, precio, partida, regreso, medio) values ()";
+   $sql = "insert into exf_Viajes (destino, tipo, descripcion, precio, partida, regreso, medio) values (".$dest . $tipo . $desc . $precio . $precio . $partida . $regreso . $medio . ")";
 
-   /*if ($result = $dbc->query($sql)){
+   if ($dbc->query($sql)){
      // output data of each row
-     $r = $result->fetch_assoc();
-     $json = json_encode($r);
-     echo $json;
+     echo '{"success":"true"}';
    } else {
      echo '{"eror": {"text": "no se encontó la agencia"}}';
    }*/

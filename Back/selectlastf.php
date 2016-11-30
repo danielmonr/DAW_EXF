@@ -3,6 +3,8 @@
    $db = new DBConnection();
    $dbc = $db->Connect();
 
+   
+
    $sql = "select * from exf_Viajes order by partida desc limit 5";
 
    if ($result = $dbc->query($sql)){

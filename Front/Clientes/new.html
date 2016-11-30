@@ -74,35 +74,31 @@
     <div class="container">
       <form action="" id="forma">
         <div class="form-group">
-          <label for="dest">Destino:</label>
-          <input type="text" class="form-control" id="dest" name="destino">
-          <label for="tipo">Tipo: </label>
-          <select class="form-control" id="tipo" name="tipo">
-            <option>Nacional</option>
-            <option>Internacional</option>
-          </select>
-          <label for="desc">Descripcion:</label>
-          <textarea class="form-control" id="desc" rows="4" name="descripcion"></textarea>
-          <label for="precio">Precio:</label>
-          <input type="text" class="form-control" id="precio" name="precio">
-          <label for="partida">Fecha de Partida:</label>
-          <input type='text' class="form-control" id="partida" name="partida"/>
-          <label for="regreso">Fecha de Regreso:</label>
-          <input type='text' class="form-control" id="regreso" name="regreso"/>
-          <label for="medio">Medio:</label>
-          <select class="form-control" id="medio" name="medio">
-            <option>Avion</option>
-            <option>Barco</option>
-            <option>Camion</option>
-          </select>
-          <input type="submit" value="Submit">
+          <label for="nom">Nombre:</label>
+          <input type="text" class="form-control" id="nom" name="nombre">
+          <label for="ap">Apellido Paterno:</label>
+          <input type="text" class="form-control" id="ap" name="apaterno">
+          <label for="am">Apellido Materno:</label>
+          <input type="text" class="form-control" id="am" name="amaterno">
+          <label for="tel">Telefono:</label>
+          <input type="number" class="form-control" id="tel" name="tel">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email"/>
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="password"/>
           <script>
             $(function () {
                 //$("#partida").datetpicker();
                 //$("#regreso").datetpicker();
             });
           </script>
-
+          <label for="medio">Medio:</label>
+          <select class="form-control" id="medio">
+            <option>Avion</option>
+            <option>Barco</option>
+            <option>Camion</option>
+          </select>
+          <input type="submit" value="Submit">
       </form>
       <script>
         $("#forma").submit(function(){
@@ -110,7 +106,7 @@
           //alert("Data" + jsonf);
           console.log( $( this ).serializeArray() );
           event.preventDefault();
-          $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/newTravel.php", { 'data': jsonf }, funciton(data){
+          $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/newCliente.php", { 'data': jsonf }, funciton(data){
               alert(data);
           });
         });
