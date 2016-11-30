@@ -14,7 +14,7 @@
    $regreso = $res[0]["value"];
    $medio = $res[0]["value"];
 
-   $sql = "insert into exf_Viajes (destino, tipo, descripcion, precio, partida, regreso, medio) values (".$dest . $tipo . $desc . $precio . $precio . $partida . $regreso . $medio . ")";
+   $sql = 'insert into exf_Viajes (destino, tipo, descripcion, precio, partida, regreso, medio) values ("' . $dest . '","' . $tipo . '","' . $desc . '",' . $precio . ',"' . $partida . '","' . $regreso . '","' . $medio . '")';
 
    if ($dbc->query($sql)){
      // output data of each row
