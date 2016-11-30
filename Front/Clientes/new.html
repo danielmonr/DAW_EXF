@@ -96,7 +96,7 @@
         //alert("Data" + jsonf);
         console.log( $( this ).serializeArray() );
         event.preventDefault();
-        $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/newTravel.php", { 'data': jsonf }, function(data){
+        $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/newCliente.php", { 'data': jsonf }, function(data){
             alert(data);
         });
       });
