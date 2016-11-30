@@ -6,29 +6,21 @@
 
    $valid = false;
 
-   print("entro<br/>");
+   //print("entro<br/>");
 
-   if (isset($_POST['username']) && isset($_POST['password'])){
-     $valid = true;
-     print("valid<br/>");
-   }
-   else{
-     print ("Please insert your username and password.<br/>");
-   }
+   $res = $_POST['data'];
+   $myusername = $res[0]["value"];
+   $mypassword = $res[1]["value"];
 
-   $myusername = mysqli_real_escape_string($dbc,$_POST['username']);
-   $mypassword = mysqli_real_escape_string($dbc,$_POST['password']);
-   $sql = "SELECT * FROM Clientes WHERE email = '$myusername' and password = '$mypassword'";
-   print("<br/>".$sql . "<br/>");
-   $result = $dbc->query($sql);
-
-if ($result->num_rows > 0) {
+   $sql = "SELECT * FROM Clientes WHERE email = '$myusername' and password = '$mypassword' limit 1";
+   //print("<br/>".$sql . "<br/>");
+   if($result = $dbc->query($sql)){
     // output data of each row
     $user = $result->fetch_assoc();
     $_SESSION['login_user'] = $user["id"];
-    header("location: home.php");
+    //header("location: home.php");
+    echo 1;
 } else {
-    print ("Invalid username or password<br/>");
-    header("location: ../HTML/login.html");
+    echo 0;
 }
 ?>
