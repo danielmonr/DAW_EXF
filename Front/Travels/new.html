@@ -106,8 +106,11 @@
       <script>
         $("#form").submit(function( event ){
           event.prventDefault();
-          var $form = $(this), term =
-        })
+          var jsonf = $("#form").serializerArray();
+          $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/newTravel.php", { 'data': jsonf }, funciton(data){
+
+          });
+        });
       </script>
 
     </div>
