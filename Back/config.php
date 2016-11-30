@@ -1,6 +1,6 @@
 <?php
-define("UserDB", "1020365_user");
-define("PasswordDB", "1020365");
+define("UserDB", "10201514_user");
+define("PasswordDB", "10201514");
 define("HostDB", "localhost");
-define("NameDB", "daw_1020365");
+define("NameDB", "daw_1021514");
 ?>
