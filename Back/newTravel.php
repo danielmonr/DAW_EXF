@@ -14,12 +14,12 @@
    $medio = $res[6]["value"];
 
    $sql = 'insert into exf_Viajes (destino, tipo, descripcion, precio, partida, regreso, medio) values ("' . $dest . '","' . $tipo . '","' . $desc . '",' . $precio . ',"' . $partida . '","' . $regreso . '","' . $medio . '")';
-   echo $sql;
+   //echo $sql;
    if ($dbc->query($sql)){
      // output data of each row
-     echo '{"success":"true"}';
+     echo 1;
    } else {
-     echo '{"eror": {"text": "no se encontó la agencia"}}';
+     echo 0;
    }
 
 ?>
