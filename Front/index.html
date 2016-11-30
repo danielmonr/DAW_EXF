@@ -78,11 +78,11 @@
                         <script>
 
                           $.get("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/selectAgencia.php", function(data){
-                            alert("Data");
-                            //data = $.ParseJSON(data);
-                            //var str = data.items.nombre;
-                            //alert(str);
-                            //getElementById('nombrea').html(str);
+                            //alert("Data");
+                            data = $.ParseJSON(data);
+                            var str = data.items.nombre;
+                            alert(str);
+                            getElementById('nombrea').html(str);
                           });
                         </script>
                         <h3>A Template by Start Bootstrap</h3>
