@@ -85,13 +85,14 @@
           <input type="text" class="form-control" id="precio">
           <label for="partida">Fecha de Partida:</label>
           <input type='text' class="form-control" id="partida"/>
-
+          <label for="regreso">Fecha de Regreso:</label>
+          <input type='text' class="form-control" id="regreso"/>
           <script>
             $(function () {
-                $('#partida').datetpicker();
+                $("#partida").datetpicker();
+                $("#regreso").datetpicker();
             });
           </script>
-          <label for="regreso">Fecha de Regreso:</label>
           <label for="medio">Medio:</label>
       </form>
     </div>
@@ -124,8 +125,7 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
