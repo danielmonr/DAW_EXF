@@ -20,6 +20,6 @@
      echo '{"success":"true"}';
    } else {
      echo '{"eror": {"text": "no se encontó la agencia"}}';
-   }*/
+   }
 
 ?>
