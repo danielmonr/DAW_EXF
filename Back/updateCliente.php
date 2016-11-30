@@ -14,13 +14,13 @@ include_once("session.php");
    $email = $res[4]["value"];
    $password = $res[5]["value"];
 
-   $sql = 'insert into exf_Clientes (nombre, apaterno, amaterno, tel, email, password) values ("' . $nombre . '","' . $apat . '","' . $amat . '",' . $tel . ',"' . $email . '","' . $password . '")';
+   $sql = 'update exf_Clientes set nombre="' . $nombre . '",apaterno="' . $apat . '",amaterno="' . $amat . '",telefono=' . $tel . ',email="' . $email . '",password="' . $password . ' where id=' . $_SESSION['login_user'];
    echo $sql;
    if ($dbc->query($sql)){
      // output data of each row
-     echo '{"success":"true"}';
+     echo 1;
    } else {
-     echo '{"eror": {"text": "no se encontó la agencia"}}';
+     echo 0;
    }
 
 ?>
