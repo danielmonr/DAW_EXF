@@ -5,7 +5,7 @@
 
    $res = $_POST['data'];
    //$decode = json_decode($res);
-   echo var_dump($res);
+   echo $res[0][0];
    /*$dest = $decode["destino"];
    $tipo = $decode["tipo"];
    $desc = $decode["descripcion"];
