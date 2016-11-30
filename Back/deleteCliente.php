@@ -10,11 +10,9 @@
    $sql = "delete from exf_Clientes where id=" . $_SESSION['login_user'];
    $sql2 = "delete from exf_Reservas where id_cliente=". $_SESSION['login_user'];
 
-   if ($result = $dbc->query($sql)){
+   if ($dbc->query($sql) && $dbc->query($sql2)){
      // output data of each row
-     $r = $result->fetch_assoc();
-     $json = json_encode($r);
-     echo $json;
+     echo 1;
    } else {
      echo 0;
    }
