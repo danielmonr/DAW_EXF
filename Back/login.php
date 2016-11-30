@@ -12,7 +12,7 @@
    $myusername = $res[0]["value"];
    $mypassword = $res[1]["value"];
 
-   $sql = "SELECT * FROM Clientes WHERE email = '$myusername' and password = '$mypassword' limit 1";
+   $sql = "SELECT * FROM exf_Clientes WHERE email = '$myusername' and password = '$mypassword' limit 1";
    //print("<br/>".$sql . "<br/>");
    if($result = $dbc->query($sql)){
     // output data of each row
