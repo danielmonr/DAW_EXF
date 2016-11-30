@@ -4,7 +4,7 @@
    $dbc = $db->Connect();
 
    $res = $_POST['data'];
-   $decode = json_decode($res);
+   //$decode = json_decode($res);
    echo $res;
    /*$dest = $decode["destino"];
    $tipo = $decode["tipo"];
