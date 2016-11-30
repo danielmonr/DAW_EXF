@@ -9,7 +9,8 @@
 
    if ($result->num_rows > 0) {
      // output data of each row
-     $r = $result->fetch_assoc();
+       $r = $result->fetch_assoc();
+       echo $r;
      $json = json_encode($r);
      echo '{"items": ' . $json . '}';
    } else {
