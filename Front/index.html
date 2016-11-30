@@ -80,8 +80,8 @@
                           $.get("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/selectAgencia.php", function(data){
                             //alert("Data");
                             //data = $.ParseJSON(data);
-                            //var str = data.items.nombre;
-                            alert(data);
+                            var arr = $.parseJSON(data);
+                            alert(arr[0].nombre);
                             getElementById('nombrea').html(str);
                           });
                         </script>
