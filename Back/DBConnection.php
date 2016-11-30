@@ -1,5 +1,6 @@
 <?php
 include_once('config.php');
+header('Access-Control-Allow-Origin: *');
 class DBConnection{
   public function Connect(){
     $connection = mysqli_connect(HostDB, UserDB, PasswordDB, NameDB);

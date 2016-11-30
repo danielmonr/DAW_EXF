@@ -7,8 +7,7 @@
 
    if ($result = $dbc->query($sql)){
      // output data of each row
-       $r = $result->fetch_assoc();
-       echo $r;
+     $r = $result->fetch_assoc();
      $json = json_encode($r);
      echo '{"items": ' . $json . '}';
    } else {
