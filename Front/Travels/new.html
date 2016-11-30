@@ -84,15 +84,10 @@
           <label for="precio">Precio:</label>
           <input type="text" class="form-control" id="precio">
           <label for="partida">Fecha de Partida:</label>
-          <div class='input-group date' id='datetimepicker1'>
-            <input type='text' class="form-control" id="partida"/>
-              <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-              </span>
-          </div>
+          <input type="text" id="partida">
           <script type="text/javascript">
             $(function () {
-                $('#datetimepicker1').datepicker();
+                $('#partida').datepicker();
             });
           </script>
           <label for="regreso">Fecha de Regreso:</label>
