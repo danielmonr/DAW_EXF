@@ -1,5 +1,6 @@
 <?php
    include_once("DBConnection.php");
+   include_once("session.php");
    $db = new DBConnection();
    $dbc = $db->Connect();
 
