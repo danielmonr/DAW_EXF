@@ -83,7 +83,7 @@
         console.log( $( this ).serializeArray() );
         event.preventDefault();
         $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/login.php", { 'data': jsonf }, function(data){
-            if(data == 1)
+            if(data)
               window.location.href = "http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Front/Travels/search.html";
         });
       });
