@@ -13,7 +13,7 @@ include_once("session.php");
    $email = $res[4]["value"];
    $password = $res[5]["value"];
 
-   $sql = 'update exf_Clientes set nombre="' . $nombre . '",apaterno="' . $apat . '",amaterno="' . $amat . '",telefono=' . $tel . ',email="' . $email . '",password="' . $password . ' where id=' . $_SESSION['login_user'];
+   $sql = 'update exf_Clientes set nombre="' . $nombre . '",apaterno="' . $apat . '",amaterno="' . $amat . '",telefono=' . $tel . ',email="' . $email . '",password="' . $password . '" where id=' . $_SESSION['login_user'];
    echo $sql;
    if ($dbc->query($sql)){
      // output data of each row
