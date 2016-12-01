@@ -106,7 +106,7 @@
 
             <center><button type="button" class="primary-button button" id="reservar">Reservar!</button></center>
             <script>
-              var b = getElementById("reservar");
+              var b = document.getElementById("reservar");
               b.onclick = function(){
                 $.get("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/newReserva.php?viaje=" + id, function(data){
                 });
