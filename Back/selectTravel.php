@@ -3,8 +3,8 @@
    $db = new DBConnection();
    $dbc = $db->Connect();
 
-   $res = $_POST['data'];
-   $id = $res[0]["value"];
+   $id = $_GET['id'];
+
 
    $sql = "select * from exf_Viajes where id=" . $id;
 
