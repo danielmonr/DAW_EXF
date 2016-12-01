@@ -82,6 +82,7 @@
             event.preventDefault();
             $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/searchTravels.php", { 'data': jsonf }, function(data){
                 var arreglo = $.parseJSON(data);
+                alert(data);
                 var l = document.getElementById("lista");
                 for(var i = 0;i<arreglo.length;i++){
                   l.append("<li><h2>"arreglo[i].destino +" el " + arreglo[i].partida +"</h2><a href='http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Front/Travels/view.html?id="+arreglo[i].id + "'>Detalles</a></li>");
