@@ -12,7 +12,7 @@
 
     $user_id = $_SESSION['login_user'];
 
-    $sql = mysqli_query($dbc,"SELECT name from Users WHERE id = '$user_id' ");
+    $sql = mysqli_query($dbc,"SELECT nombre from exf_Clientes WHERE id = '$user_id' ");
 
     $row = mysqli_fetch_array($sql, MYSQLI_ASSOC);
 
