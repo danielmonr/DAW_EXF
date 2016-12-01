@@ -75,13 +75,39 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading" id="firsttravel"></h2>
-                    <p class="lead" id="dfirst"></p>
+                    <h2 class="section-heading" id="titulo"></h2>
+                    <p class="lead" id="tiempos"></p>
+                    <p class="lead" id="desc"></p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/ipad.png" alt="">
                 </div>
             </div>
+
+            <script>
+              var id = getQueryVariable("id");
+              $.get("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/selectTravel.php?id=" + id, function(data){
+                //alert("Data");
+                //data = $.ParseJSON(data);
+                var arr = $.parseJSON(data);
+                var destino = arr.destino;
+                var tipo = arr.tipo;
+                var descripcion = arr.descripcion;
+                var precio = arr.precio;
+                var partida = arr.partida;
+                var regreso = arr.regreso;
+                var medio = arr.medio;
+
+                document.getElementById("titulo").value = "Viaja a " + destino + " en " + medio + ".";
+                document.getElementById("tiempos").value = "Fechas:<br/>Salida: " + partida + "<br/>Llegada: "+ regreso + ".";
+                document.getElementById("desc").value = "Descripcion:<br/>"+descripcion+"<br/>Precio: $"+precio;
+                document.getElementById("desc").value = descripcion;
+                document.getElementById("precio").value = precio;
+                document.getElementById("partida").value = partida;
+                document.getElementById("regreso").value = regreso;
+                document.getElementById("medio").value = medio;
+              });
+            </script>
 
         </div>
         <!-- /.container -->
