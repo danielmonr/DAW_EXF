@@ -5,9 +5,7 @@ include_once("session.php");
    $db = new DBConnection();
    $dbc = $db->Connect();
 
-   $res = $_POST['data'];
-   //$decode = json_decode($res);
-   $viaje = $res[0]["value"];
+   $viaje = $_GET['viaje'];
 
    $sql = 'insert into exf_Reservas (id_cliente, id_viaje) values (' . $_SESSION['login_user'] . ',' . $viaje . ')';
    echo $sql;
