@@ -4,7 +4,7 @@ function getQueryVariable(variable){
   for (var i = 0;i<vars.length;i++){
     var pair = vars[i].split("=");
     if (pair[0] == variable){
-      alert("ID = " + pair[1]);
+      //alert("ID = " + pair[1]);
       return pair[1];
     }
   }
