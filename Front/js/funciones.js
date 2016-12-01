@@ -7,5 +7,5 @@ function getQueryVariable(variable){
       return pair[1];
     }
   }
-  alert()
+  alert("Error no hay parametro.");
 }
