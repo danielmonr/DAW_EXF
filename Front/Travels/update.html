@@ -74,6 +74,7 @@
     <div class="container">
       <form action="" id="forma">
         <div class="form-group">
+          <input type="hidden" name="id">
           <label for="dest">Destino:</label>
           <input type="text" class="form-control" id="dest" name="destino">
           <label for="tipo">Tipo: </label>
@@ -105,17 +106,22 @@
         //alert("Data");
         //data = $.ParseJSON(data);
         var arr = $.parseJSON(data);
-        var nombre = arr.nombre;
-        var apa = arr.apaterno;
-        var ama = arr.amaterno;
-        var tel = arr.tel;
-        var email = arr.email;
+        var destino = arr.destino;
+        var tipo = arr.tipo;
+        var descripcion = arr.descripcion;
+        var precio = arr.precio;
+        var partida = arr.partida;
+        var regreso = arr.regreso;
+        var medio = arr.medio;
 
-        document.getElementById("nom").value = nombre;
-        document.getElementById("ap").value = apa;
-        document.getElementById("am").value = ama;
-        document.getElementById("tel").value = tel;
-        document.getElementById("email").value = email;
+        document.getElementById("id").value = id;
+        document.getElementById("dest").value = destino;
+        document.getElementById("tipo").value = tipo;
+        document.getElementById("desc").value = descripcion;
+        document.getElementById("precio").value = precio;
+        document.getElementById("partida").value = partida;
+        document.getElementById("regreso").value = regreso;
+        document.getElementById("medio").value = medio;
       });
 
 
@@ -126,7 +132,7 @@
           //alert("Data" + jsonf);
           console.log( $( this ).serializeArray() );
           event.preventDefault();
-          $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/newTravel.php", { 'data': jsonf }, function(data){
+          $.post("http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Back/updateTravel.php", { 'data': jsonf }, function(data){
               alert(data);
           });
         });
