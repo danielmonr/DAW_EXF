@@ -18,7 +18,7 @@
     // output data of each row
     $user = $result->fetch_assoc();
     $_SESSION['login_user'] = $user["id"];
-    //header("location: home.php");
+    header("location: http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Front/Travels/search.html");
     echo 1;
 } else {
     echo 0;

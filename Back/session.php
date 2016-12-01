@@ -7,7 +7,7 @@
     //print("Se está corriendo<br/>");
 
     if(!isset($_SESSION['login_user'])){
-        header("location: ../Front/index.html");
+        header("location: http://ubiquitous.csf.itesm.mx/~daw-1021514/content/DAW_EXF/Front/index.htm");
     }
 
     $user_id = $_SESSION['login_user'];
