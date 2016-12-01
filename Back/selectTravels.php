@@ -3,13 +3,16 @@
    $db = new DBConnection();
    $dbc = $db->Connect();
 
+   $array = array();
 
    $sql = "select * from exf_Viajes";
 
    if ($result = $dbc->query($sql)){
-     // output data of each row
-     $r = $result->fetch_assoc();
-     $json = json_encode($r);
+     while($r = $result->fetch_assoc()){
+      array_push($array, $r);
+     }
+
+     $json = json_encode($array);
      echo $json;
    } else {
      echo 0;
