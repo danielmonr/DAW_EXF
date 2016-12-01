@@ -16,7 +16,7 @@
 
     $row = mysqli_fetch_array($sql, MYSQLI_ASSOC);
 
-    $name_logged = $row['name'];
+    $name_logged = $row['nombre'];
 
 
 ?>
