@@ -98,14 +98,9 @@
                 var regreso = arr.regreso;
                 var medio = arr.medio;
 
-                document.getElementById("titulo").value = "Viaja a " + destino + " en " + medio + ".";
-                document.getElementById("tiempos").value = "Fechas:<br/>Salida: " + partida + "<br/>Llegada: "+ regreso + ".";
-                document.getElementById("desc").value = "Descripcion:<br/>"+descripcion+"<br/>Precio: $"+precio;
-                document.getElementById("desc").value = descripcion;
-                document.getElementById("precio").value = precio;
-                document.getElementById("partida").value = partida;
-                document.getElementById("regreso").value = regreso;
-                document.getElementById("medio").value = medio;
+                document.getElementById("titulo").innerHTML = "Viaja a " + destino + " en " + medio + ".";
+                document.getElementById("tiempos").innerHTML = "Fechas:<br/>Salida: " + partida + "<br/>Llegada: "+ regreso + ".";
+                document.getElementById("desc").innerHTML = "Descripcion:<br/>"+descripcion+"<br/>Precio: $"+precio;
               });
             </script>
 
